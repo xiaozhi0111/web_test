@@ -6,6 +6,8 @@ axios.defaults.timeout = 60000;
 
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 
+axios.defaults.baseURL = '/api';
+
 export function GET(url,params){
     return new Promise((resolve,reject)=>{
         axios.get(url,{params:params})

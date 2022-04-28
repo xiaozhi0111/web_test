@@ -26,12 +26,19 @@ export default new Router({
     {
       path: '/home',
       name:'首页',
-      component: Home
+      component: Home,
+      children: [
+        {
+          path:'mine',
+          name:'我的',
+          component:() => import ('@/view/mine')
+        }
+      ]
     },
     {
       path: '/login',
       name: '登录页',
-      component: Login
+      component: () => import ('@/view/Login')
     },
     {
       path: '/test',

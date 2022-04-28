@@ -7,12 +7,14 @@ import mutations from './mutations'
 
 Vue.use(vuex);
 
-export default new vuex.Store({
+const store =  new vuex.Store({
     state:{
-
+        token:'',           //用户登录之后记录的token。
     },
     getters:getters,
     actions:actions,
     mutations:mutations
     
 })
+
+export default store;
